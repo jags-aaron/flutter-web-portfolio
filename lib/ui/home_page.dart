@@ -473,7 +473,7 @@ class HomePageState extends State<HomePage> {
                                           100,
                                       //color: Colors.white,
                                       child: Text(
-                                        "Built & Design based on Tushar Nikam 💙 Flutter",
+                                        "Page Build on 💙 Flutter",
                                         style: TextStyle(
                                           color: Colors.white.withOpacity(0.4),
                                           letterSpacing: 1.75,

@@ -50,8 +50,8 @@ class MobileHomeState extends State<MobileHome> {
                   currentAccountPicture: CircleAvatar(
                     child: Icon(Icons.person),
                   ),
-                  accountName: Text("Tushar Nikam"),
-                  accountEmail: Text("champ96k@gmail.com")),
+                  accountName: Text("Aaron Garcia."),
+                  accountEmail: Text("aaron.jags.dev@gmail.com")),
               ListTile(
                 title: Text("Share"),
                 leading: Icon(Icons.share),
@@ -97,7 +97,7 @@ class MobileHomeState extends State<MobileHome> {
                 height: size.height * 0.02,
               ),
               const CustomText(
-                text: "Tushar Nikam.",
+                text: "Aaron Garcia.",
                 textsize: 52.0,
                 color: Color(0xffCCD6F6),
                 fontWeight: FontWeight.w900,
@@ -106,7 +106,7 @@ class MobileHomeState extends State<MobileHome> {
                 height: size.height * 0.04,
               ),
               CustomText(
-                text: "I build things for the Android and web.",
+                text: "I build Mobile apps.",
                 textsize: 42.0,
                 color: const Color(0xffCCD6F6).withOpacity(0.6),
                 fontWeight: FontWeight.w700,
@@ -119,7 +119,10 @@ class MobileHomeState extends State<MobileHome> {
                 child: Wrap(
                   children: const [
                      Text(
-                      "I'm a freelancer based in Nashik, IN specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.",
+                       "I'm a freelancer based in Guadalajara, Mexico. "
+                           "\nSpecialized in mobile app development "
+                           "\nusing native (Swift | Kotlin) "
+                           "\nand hybrid (flutter)",
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15.0,
@@ -213,26 +216,18 @@ class MobileHomeState extends State<MobileHome> {
 
                       //About me desc
                       Wrap(
-                        children: [
-                          const CustomText(
+                        children: const [
+                          CustomText(
                             text:
-                            "Hello! I'm Tushar, a Freelancer based in Nashik, IN.\nI enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.\n",
+                            "Hello! I'm Aaron.\n\nI'm a passionate about mobile app development by creating applications that add value to people's daily life. \n\nI like challenges and go beyond the limits to make things as good as possible. \n\nCurrently I have more experience in Android, but I'm always willing to try with other technologies like IOS, React Native, Xamarin, Flutter.",
                             textsize: 16.0,
                             color: Color(0xff828DAA),
                             fontWeight: FontWeight.w500,
                             letterSpacing: 0.75,
                           ),
-                          const CustomText(
+                          CustomText(
                             text:
-                            "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at University of Pune, as well as doing freelancing where I work on a wide variety of interesting and meaningful projects on a daily basis.\n",
-                            textsize: 16.0,
-                            color: Color(0xff828DAA),
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 0.75,
-                          ),
-                          const CustomText(
-                            text:
-                            "Here are a few technologies I've been working with recently:\n\n",
+                            "\nHere are a few technologies I've been working with recently:\n\n",
                             textsize: 16.0,
                             color: Color(0xff828DAA),
                             fontWeight: FontWeight.w500,
@@ -242,7 +237,7 @@ class MobileHomeState extends State<MobileHome> {
                       ),
 
                       SizedBox(
-                        height: size.height * 0.06,
+                        height: size.height * 0.02,
                       ),
 
                       Container(
@@ -255,20 +250,10 @@ class MobileHomeState extends State<MobileHome> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                technology(context, "Dart"),
-                                technology(context, "Flutter"),
-                                technology(context, "Firebase"),
-                                technology(context, "UI/UX (Adobe XD)"),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                technology(context, "C/C++"),
-                                technology(context, "HTML, & (S)Css"),
-                                technology(context, "MYSQL"),
-                                technology(context, "Java"),
+                                technology(context, "Flutter (Dart)"),
+                                technology(context, "Android (Kotlin)"),
+                                technology(context, "IOS (Swift)"),
+                                technology(context, "NodeJs (JavaScript)"),
                               ],
                             ),
                           ],
@@ -325,29 +310,21 @@ class MobileHomeState extends State<MobileHome> {
               //Where I've Worked title
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const CustomText(
+                children: const [
+                  CustomText(
                     text: "02.",
                     textsize: 20.0,
                     color: Color(0xff61F9D5),
                     fontWeight: FontWeight.w700,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 12.0,
                   ),
-                  const CustomText(
+                  CustomText(
                     text: "Where I've Worked",
                     textsize: 26.0,
                     color: Color(0xffCCD6F6),
                     fontWeight: FontWeight.w700,
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.01,
-                  ),
-                  Container(
-                    width: size.width * 0.08,
-                    height: 1.10,
-                    color: const Color(0xff303C55),
                   ),
                 ],
               ),
@@ -433,7 +410,7 @@ class MobileHomeState extends State<MobileHome> {
                         alignment: WrapAlignment.center,
                         children: [
                           Text(
-                            "Although I'm currently looking for SDE-1 opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+                            "Although I'm currently looking for Freelance part-time opportunities, my inbox is \nalways open. Whether you have a question or just want to say hi, I'll try my \nbest to get back to you!",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white.withOpacity(0.4),
@@ -493,7 +470,7 @@ class MobileHomeState extends State<MobileHome> {
                       size: 15.0,
                     ),
                     onPressed: () {
-                      method.launchURL("https://github.com/champ96k");
+                      method.launchURL("https://github.com/jags-aaron");
                     },
                   ),
                   IconButton(
@@ -504,7 +481,7 @@ class MobileHomeState extends State<MobileHome> {
                     ),
                     onPressed: () {
                       method.launchURL(
-                          "https://www.linkedin.com/in/tushar-nikam-a29a97131/");
+                          "https://www.linkedin.com/in/aaron-garcia-69a18681/");
                     },
                   ),
                   IconButton(
@@ -514,7 +491,7 @@ class MobileHomeState extends State<MobileHome> {
                       size: 15.0,
                     ),
                     onPressed: () {
-                      method.launchURL("https://twitter.com/champ_96k");
+                      method.launchURL("https://twitter.com/AaronJags");
                     },
                   ),
                   IconButton(
@@ -541,7 +518,7 @@ class MobileHomeState extends State<MobileHome> {
                 width: MediaQuery.of(context).size.width,
                 //color: Colors.white,
                 child: Text(
-                  "Designed & Built by Tushar Nikam 💙 Flutter",
+                  "Page Build on 💙 Flutter",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.4),
