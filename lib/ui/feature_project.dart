@@ -39,7 +39,7 @@ class FeatureProject extends StatelessWidget {
                 //Image
                 Positioned(
                   top: size.height * 0.02,
-                  left: 20.0,
+                  left: 10.0,
                   child: SizedBox(
                     height: size.height * 0.60,
                     width: size.width * 0.5,
@@ -54,12 +54,12 @@ class FeatureProject extends StatelessWidget {
                 // Short Desc
                 Positioned(
                   top: size.height / 6,
-                  right: 10.0,
+                  right: 20.0,
                   child: Container(
                     alignment: Alignment.center,
                     height: size.height * 0.18,
-                    width: size.width * 0.35,
-                    color: Color(0xff172A45),
+                    width: size.width * 0.32,
+                    color: const Color(0xff172A45),
                     child: Wrap(
                       alignment: WrapAlignment.center,
                       children: [
@@ -153,7 +153,7 @@ class FeatureProject extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                          icon: const FaIcon(FontAwesomeIcons.github),
+                          icon: const FaIcon(FontAwesomeIcons.link),
                           color: Colors.white.withOpacity(0.3),
                           onPressed: ontab,
                         ),

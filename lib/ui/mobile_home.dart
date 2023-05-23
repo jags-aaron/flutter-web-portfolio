@@ -394,7 +394,7 @@ class MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic9.jpg",
+                image: "images/pic_nubank.png",
               ),
 
               SizedBox(

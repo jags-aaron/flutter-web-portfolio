@@ -352,17 +352,17 @@ class HomePageState extends State<HomePage> {
                                         height: size.height * 0.04,
                                       ),
                                       FeatureProject(
-                                        imagePath: "images/pic9.jpg",
+                                        imagePath: "images/pic_nubank.png",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/WhatsApp--UI-Clone");
+                                              "https://nu.com.mx/credito/");
                                         },
+                                        projectTitle: "Nubank",
                                         projectDesc:
-                                            "A Mobile app for both Android and IOS. View your Status, Chat, and call history. The purpose of this projcet is to Learn Flutter complex UI Design.",
-                                        projectTitle: "WhatsaApp UI Clone",
-                                        tech1: "Flutter",
-                                        tech2: "Dart",
-                                        tech3: "Flutter UI",
+                                            """Nubank is a Brazilian neobank and the largest fintech bank in Latin America. Its headquarters are located in São Paulo, Brazil. The company also has engineering offices in Berlin, Germany, Buenos Aires, Argentina, and an office in Mexico City, Mexico.""",
+                                        tech1: "Flutter (Dart)",
+                                        tech2: "Android (Kotlin)",
+                                        tech3: "IOS (Swift)",
                                       ),
                                     ],
                                   )),
