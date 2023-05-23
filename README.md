@@ -1,6 +1,6 @@
 # flutter_web_portfolio
 
-A new Flutter project.
+A new Flutter project [link](https://jags-aaron.github.io/flutter-web-portfolio/).
 
 ## Getting Started
 
