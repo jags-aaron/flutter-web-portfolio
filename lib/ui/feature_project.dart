@@ -106,7 +106,7 @@ class FeatureProject extends StatelessWidget {
                   top: size.height * 0.36,
                   right: 10.0,
                   child: SizedBox(
-                    height: size.height * 0.08,
+                    height: size.height * 0.1,
                     width: size.width * 0.25,
                     // color: Colors.indigo,
                     child: Row(
