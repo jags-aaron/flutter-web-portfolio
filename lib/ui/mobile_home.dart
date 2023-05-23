@@ -332,7 +332,7 @@ class MobileHomeState extends State<MobileHome> {
               const MobileWork(),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.8,
               ),
 
               //Some Things I've Built title
@@ -366,7 +366,7 @@ class MobileHomeState extends State<MobileHome> {
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.1,
               ),
 
               MobileProject(
@@ -375,7 +375,7 @@ class MobileHomeState extends State<MobileHome> {
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.2,
               ),
 
               FittedBox(

@@ -59779,21 +59779,22 @@ o=a1*0.5
 n=r*0.6
 n=A.hn(A.ay(A.j0(B.aI,A.a([A.hP(e,A.rn(A.bz(e,e,B.j,B.aN,e,e,e,a1*0.45,B.m4,e,e,e,r*0.66),B.bk,e,e),e,e,50,20,50,e),A.ay(B.ml,o,n),A.bz(e,e,B.j,A.am(B.d.b_(127.5),97,249,213),e,e,e,o,e,e,e,e,n)],q),B.aE),a1*0.6,r*0.7),e,e)
 o=A.ds(B.DX,B.q,B.y,B.G)
-m=A.ay(e,p,e)
+m=A.ay(e,a1*0.8,e)
 l=A.ds(A.a([B.AT,B.ca,B.AM,A.ay(e,e,b3.K(c).f.a.a*0.01),A.bz(e,e,B.j,B.cm,e,e,e,1.1,e,e,e,e,r*0.04)],q),B.q,B.y,B.G)
-k=A.ay(e,p,e)
-j=A.ay(e,p,e)
+k=a1*0.1
+j=A.ay(e,k,e)
+a1=A.ay(e,a1*0.2,e)
 a6=A.ay(e,a6,e)
 i=A.ja(B.vx,A.a([A.h3(u.f,e,e,A.eR(e,e,A.am(102,255,255,255),e,e,e,e,e,e,e,e,16,e,e,e,e,e,!0,e,0.75,e,e,e,e,e,e),B.cb,e)],q))
 h=A.ay(e,p,e)
 g=A.eh(6)
-r=A.adp(A.bz(B.B,A.cV(A.a([B.AJ,B.kj,B.lM,a6,i,h,A.rn(A.bz(B.B,B.rS,B.j,e,e,new A.cp(B.aN,e,e,A.eh(6),e,e,B.X),e,a1*0.1,B.fk,e,e,e,r*0.3),B.ar,4,new A.ce(g,B.n))],q),B.q,B.rz),B.j,e,e,e,e,e,e,e,e,e,r),B.eP)
+r=A.adp(A.bz(B.B,A.cV(A.a([B.AJ,B.kj,B.lM,a6,i,h,A.rn(A.bz(B.B,B.rS,B.j,e,e,new A.cp(B.aN,e,e,A.eh(6),e,e,B.X),e,k,B.fk,e,e,e,r*0.3),B.ar,4,new A.ce(g,B.n))],q),B.q,B.rz),B.j,e,e,e,e,e,e,e,e,e,r),B.eP)
 g=A.ay(e,p,e)
-a1=A.ds(A.a([A.eG(e,B.Cl,e,new A.W1(d),e),A.eG(e,B.Ch,e,new A.W2(d),e),A.eG(e,B.Cj,e,new A.W3(d),e),A.eG(e,B.Cn,e,new A.W4(d),e)],q),B.q,B.cK,B.G)
+k=A.ds(A.a([A.eG(e,B.Cl,e,new A.W1(d),e),A.eG(e,B.Ch,e,new A.W2(d),e),A.eG(e,B.Cj,e,new A.W3(d),e),A.eG(e,B.Cn,e,new A.W4(d),e)],q),B.q,B.cK,B.G)
 p=A.ay(e,p,e)
 h=b3.K(c).f
 c=b3.K(c).f
-return A.aeL(new A.r3(a0,0,B.aN,new A.Kq(e,e,1/0,56),e),B.aN,A.aeS(new A.bJ(B.b6,A.cV(A.a([a3,B.lN,a5,B.AR,a7,new A.bM("I build Mobile apps.",42,a8,e,B.F,e),a9,new A.bJ(B.dr,b0,e),b1,b2,s,a4,a2,n,o,B.H5,m,l,k,new A.Ds(new A.W5(),"images/pic_nubank.png",e),j,r,g,a1,p,A.bz(B.B,A.h3("Page Build on \ud83d\udc99 Flutter",e,e,A.eR(e,e,A.am(102,255,255,255),e,e,e,e,e,e,e,e,14,e,e,e,e,e,!0,e,1.75,e,e,e,e,e,e),B.cb,e),B.j,e,e,e,e,h.a.b/6,e,e,e,e,c.a.a)],q),B.bm,B.y),e),e,B.ad,e,e,e,B.aK),new A.BN(6,a,e))}}
+return A.aeL(new A.r3(a0,0,B.aN,new A.Kq(e,e,1/0,56),e),B.aN,A.aeS(new A.bJ(B.b6,A.cV(A.a([a3,B.lN,a5,B.AR,a7,new A.bM("I build Mobile apps.",42,a8,e,B.F,e),a9,new A.bJ(B.dr,b0,e),b1,b2,s,a4,a2,n,o,B.H5,m,l,j,new A.Ds(new A.W5(),"images/pic_nubank.png",e),a1,r,g,k,p,A.bz(B.B,A.h3("Page Build on \ud83d\udc99 Flutter",e,e,A.eR(e,e,A.am(102,255,255,255),e,e,e,e,e,e,e,e,14,e,e,e,e,e,!0,e,1.75,e,e,e,e,e,e),B.cb,e),B.j,e,e,e,e,h.a.b/6,e,e,e,e,c.a.a)],q),B.bm,B.y),e),e,B.ad,e,e,e,B.aK),new A.BN(6,a,e))}}
 A.W_.prototype={
 $0(){},
 $S:0}
