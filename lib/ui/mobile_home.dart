@@ -101,36 +101,74 @@ class MobileHomeState extends State<MobileHome> {
               SizedBox(
                 height: size.height * 0.06,
               ),
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                ),
-                color: const Color(0xff64FFDA),
-                child: Container(
-                  alignment: Alignment.center,
-                  margin: const EdgeInsets.all(0.75),
-                  height: 56.0,
-                  width: 160.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4.0),
-                    color: const Color(0xff0A192F),
-                  ),
-                  child: MaterialButton(
-                    onPressed: () {
-                      method.launchEmail();
-                    },
-                    hoverColor: Colors.green,
-                    child: const Text(
-                      "Get In Touch",
-                      style: TextStyle(
-                        color: Color(0xff64FFDA),
-                        letterSpacing: 2.75,
-                        wordSpacing: 1.0,
-                        fontSize: 15.0,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                    color: const Color(0xff64FFDA),
+                    child: Container(
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.all(0.75),
+                      height: 56.0,
+                      width: 160.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(4.0),
+                        color: const Color(0xff0A192F),
+                      ),
+                      child: MaterialButton(
+                        onPressed: () {
+                          method.launchEmail();
+                        },
+                        hoverColor: Colors.green,
+                        child: const Text(
+                          "Get In Touch",
+                          style: TextStyle(
+                            color: Color(0xff64FFDA),
+                            letterSpacing: 2.75,
+                            wordSpacing: 1.0,
+                            fontSize: 15.0,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
+
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                    color: const Color(0xff64FFDA),
+                    child: Container(
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.all(0.75),
+                      height: 56.0,
+                      width: 160.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(4.0),
+                        color: const Color(0xff0A192F),
+                      ),
+                      child: MaterialButton(
+                        onPressed: () {
+                          method.launchURL(
+                              "https://drive.google.com/file/d/1FPwrhc42Fs8BNfcjVlAOa7hz2B652Drf/view?usp=share_link");
+                        },
+                        hoverColor: Colors.green,
+                        child: const Text(
+                          "Resume",
+                          style: TextStyle(
+                            color: Color(0xff64FFDA),
+                            letterSpacing: 2.75,
+                            wordSpacing: 1.0,
+                            fontSize: 15.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
 
               SizedBox(
