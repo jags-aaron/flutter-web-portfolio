@@ -79,7 +79,7 @@ class About extends StatelessWidget {
                   children: const [
                     CustomText(
                       text:
-                          "Hello! I'm Aaron.\n\nI'm a passionate about mobile app development by creating applications that add value to people's daily life. \n\nI like challenges and go beyond the limits to make things as good as possible. \n\nCurrently I have more experience in Android, but I'm always willing to try with other technologies like IOS, React Native, Xamarin, Flutter.",
+                          "Hello! \n\nI'm a mobile app developer with more than 8 years of experience creating applications that add value to people's daily life. \n\nI like challenges and go beyond the limits to make things as good as possible. \n\nCurrently I have more experience in Android, but I'm always willing to try with other technologies like IOS, React Native, Xamarin, Flutter.",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       letterSpacing: 0.75,

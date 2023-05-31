@@ -42,41 +42,6 @@ class MobileHomeState extends State<MobileHome> {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xff0A192F),
-      endDrawer: Drawer(
-          elevation: 6.0,
-          child: Column(
-            children: const [
-              UserAccountsDrawerHeader(
-                  currentAccountPicture: CircleAvatar(
-                    child: Icon(Icons.person),
-                  ),
-                  accountName: Text("Aaron Garcia."),
-                  accountEmail: Text("aaron.jags.dev@gmail.com")),
-              ListTile(
-                title: Text("Share"),
-                leading: Icon(Icons.share),
-              ),
-              ListTile(
-                leading: Icon(Icons.group),
-                title: Text("About"),
-              ),
-              Expanded(
-                child: Text("Version 1.0.1"),
-              )
-            ],
-          )),
-      appBar: AppBar(
-        backgroundColor: const Color(0xff0A192F),
-        elevation: 0.0,
-        title: IconButton(
-          icon: const Icon(
-            Icons.change_history,
-            size: 32.0,
-            color: Color(0xff64FFDA),
-          ),
-          onPressed: () {},
-        ),
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -219,7 +184,7 @@ class MobileHomeState extends State<MobileHome> {
                         children: const [
                           CustomText(
                             text:
-                                "Hello! I'm Aaron.\n\nI'm a passionate about mobile app development by creating applications that add value to people's daily life. \n\nI like challenges and go beyond the limits to make things as good as possible. \n\nCurrently I have more experience in Android, but I'm always willing to try with other technologies like IOS, React Native, Xamarin, Flutter.",
+                                "Hello! \n\nI'm a mobile app developer with more than 8 years of experience creating applications that add value to people's daily life. \n\nI like challenges and go beyond the limits to make things as good as possible. \n\nCurrently I have more experience in Android, but I'm always willing to try with other technologies like IOS, React Native, Xamarin, Flutter.",
                             textsize: 16.0,
                             color: Color(0xff828DAA),
                             fontWeight: FontWeight.w500,
@@ -516,29 +481,34 @@ class MobileHomeState extends State<MobileHome> {
                       SizedBox(
                         height: size.height * 0.07,
                       ),
-                      Card(
-                        elevation: 4.0,
-                        color: const Color(0xff64FFDA),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6.0),
-                        ),
-                        child: Container(
-                          margin: const EdgeInsets.all(0.85),
-                          height: size.height * 0.10,
-                          width: size.width * 0.30,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: const Color(0xff0A192F),
+                      InkWell(
+                        onTap: () {
+                          method.launchEmail();
+                        },
+                        child: Card(
+                          elevation: 4.0,
+                          color: const Color(0xff64FFDA),
+                          shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6.0),
                           ),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 8.0,
+                          child: Container(
+                            margin: const EdgeInsets.all(0.85),
+                            height: size.height * 0.07,
+                            width: size.width * 0.30,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: const Color(0xff0A192F),
+                              borderRadius: BorderRadius.circular(6.0),
                             ),
-                            child: Text(
-                              "Say Hello",
-                              style: TextStyle(
-                                color: Color(0xff64FFDA),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 8.0,
+                              ),
+                              child: Text(
+                                "Say Hello",
+                                style: TextStyle(
+                                  color: Color(0xff64FFDA),
+                                ),
                               ),
                             ),
                           ),
