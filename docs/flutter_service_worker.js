@@ -4,9 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "0288ba20bee478e177fa039cb69fb1e5",
-"index.html": "a711aa798c734e08dd77bd2c4af53777",
-"/": "a711aa798c734e08dd77bd2c4af53777",
-"main.dart.js": "98b3e593ab37162ab4ad7df1144d271d",
+"index.html": "fb133d106027d55bcb33b2097bab2714",
+"/": "fb133d106027d55bcb33b2097bab2714",
+"main.dart.js": "b0ac67612a4c464b5176e00a5bd821bb",
 "flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
@@ -16,7 +16,7 @@ const RESOURCES = {
 "manifest.json": "e611106e9c1e33c788f56274b6bf45f2",
 "assets/images/pic_crabi.png": "939c6974bd24bed7439b74ddec62f244",
 "assets/images/pic1.jpg": "333114a0702e96583df4bf3b5b9fb6aa",
-"assets/images/pic_nubank.png": "8ba063eca964c6876d4e1039c2b2da38",
+"assets/images/pic_nubank.png": "a3370bff2fe2c271bddd1a1317f5b7aa",
 "assets/AssetManifest.json": "c917d1a10b3bcf637876f73f9816bdf8",
 "assets/NOTICES": "73b5a25a7a0ade2c556ebbfb595d1f35",
 "assets/FontManifest.json": "5a32d4310a6f5d9a6b651e75ba0d7372",
