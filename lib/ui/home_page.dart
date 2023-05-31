@@ -230,261 +230,342 @@ class HomePageState extends State<HomePage> {
                           controller: _autoScrollController,
                           slivers: <Widget>[
                             SliverList(
-                                delegate: SliverChildListDelegate([
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
+                              delegate: SliverChildListDelegate(
+                                [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(
+                                        height: size.height * .06,
+                                      ),
+                                      const CustomText(
+                                        text: "Hi, my name is",
+                                        textsize: 16.0,
+                                        color: Color(0xff41FBDA),
+                                        letterSpacing: 3.0,
+                                      ),
+                                      const SizedBox(
+                                        height: 6.0,
+                                      ),
+                                      const CustomText(
+                                        text: "Aaron Garcia.",
+                                        textsize: 68.0,
+                                        color: Color(0xffCCD6F6),
+                                        fontWeight: FontWeight.w900,
+                                      ),
+                                      const SizedBox(
+                                        height: 4.0,
+                                      ),
+                                      CustomText(
+                                        text: "I build Mobile apps.",
+                                        textsize: 45.0,
+                                        color: const Color(0xffCCD6F6)
+                                            .withOpacity(0.6),
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                      SizedBox(
+                                        height: size.height * .04,
+                                      ),
+                                      Wrap(
+                                        children: const [
+                                          Text(
+                                            "I'm a freelancer based in Guadalajara, Mexico. "
+                                            "\nSpecialized in mobile app development "
+                                            "\nusing native (Swift | Kotlin) "
+                                            "\nand hybrid (flutter)",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 16.0,
+                                              letterSpacing: 2.75,
+                                              wordSpacing: 0.75,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: size.height * .12,
+                                      ),
+
+                                      //get in tuch text
+                                      InkWell(
+                                        onTap: () {
+                                          method.launchEmail();
+                                        },
+                                        hoverColor: const Color(0xff64FFDA)
+                                            .withOpacity(0.2),
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        child: Container(
+                                          alignment: Alignment.center,
+                                          height: size.height * 0.09,
+                                          width: size.width * 0.14,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color: const Color(0xff64FFDA),
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(4.0),
+                                          ),
+                                          child: const Text(
+                                            "Get In Touch",
+                                            style: TextStyle(
+                                              color: Color(0xff64FFDA),
+                                              letterSpacing: 2.75,
+                                              wordSpacing: 1.0,
+                                              fontSize: 15.0,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: size.height * 0.20,
+                                      ),
+                                    ],
+                                  ),
+
+                                  //About Me
+                                  _wrapScrollTag(
+                                    index: 0,
+                                    child: About(),
+                                  ),
                                   SizedBox(
-                                    height: size.height * .06,
+                                    height: size.height * 0.02,
                                   ),
-                                  const CustomText(
-                                    text: "Hi, my name is",
-                                    textsize: 16.0,
-                                    color: Color(0xff41FBDA),
-                                    letterSpacing: 3.0,
+
+                                  //Where I've Worked
+                                  _wrapScrollTag(
+                                    index: 1,
+                                    child: const Work(),
                                   ),
+                                  SizedBox(
+                                    height: size.height * 0.10,
+                                  ),
+
+                                  //Some Things I've Built Main Project
+                                  _wrapScrollTag(
+                                      index: 2,
+                                      child: Column(
+                                        children: [
+                                          const MainTitle(
+                                            number: "0.3",
+                                            text: "Some Things I've Built",
+                                          ),
+                                          SizedBox(
+                                            height: size.height * 0.04,
+                                          ),
+                                          FeatureProject(
+                                            imagePath: "images/pic_nubank.png",
+                                            ontab: () {
+                                              method.launchURL(
+                                                  "https://play.google.com/store/search?q=Nubank&c=apps");
+                                            },
+                                            projectTitle: "Nubank",
+                                            projectDesc:
+                                                """Nubank is a Brazilian neobank and the largest fintech bank in Latin America. Its headquarters are located in São Paulo, Brazil. The company also has engineering offices in Berlin, Germany, Buenos Aires, Argentina, and an office in Mexico City, Mexico.""",
+                                            tech1:
+                                                "Flutter (Dart)\nAndroid (Kotlin)\nIOS (Swift)",
+                                          ),
+                                          FeatureProject(
+                                            imagePath: "images/pic_crabi.png",
+                                            ontab: () {
+                                              method.launchURL(
+                                                  "https://play.google.com/store/apps/details?id=com.crabi.customerjourneys");
+                                            },
+                                            projectTitle: "Crabi",
+                                            projectDesc:
+                                                "Crabi is a vertically-integrated Insurtech carrier which uses big data to analyze individual"
+                                                "driving behavior, thus allowing us to offer personalized premiums specific to each driver’s risk"
+                                                "profile We highly personalize car insurance through mobile technology.",
+                                            tech1:
+                                                "Flutter (Dart)\nAndroid (Kotlin)\nIOS (Swift)",
+                                          ),
+                                          FeatureProject(
+                                            imagePath: "images/pic_secapp.png",
+                                            ontab: () {
+                                              method.launchURL(
+                                                  "https://play.google.com/store/search?q=secapp&c=apps");
+                                            },
+                                            projectTitle: "Secapp",
+                                            projectDesc:
+                                                "This application helps you to send alerts and notify all users that you"
+                                                "added in your friends circle when you are in danger, sending audio/video streaming if you want"
+                                                "from your device.",
+                                            tech2: "Android (Kotlin)",
+                                          ),
+                                          FeatureProject(
+                                            imagePath:
+                                                "images/pic_cnn_expansion.png",
+                                            ontab: () {
+                                              method.launchURL(
+                                                  "https://expansion.mx/");
+                                            },
+                                            projectTitle: "CNN Expansion",
+                                            projectDesc:
+                                                "is the mobile application of the Brand Leader in the Information Business"
+                                                "and Economics in Mexico. It shows the news about world business, finance, markets,"
+                                                "technology, politics and national events.",
+                                            tech2: "Android (Kotlin)",
+                                          ),
+                                          FeatureProject(
+                                            imagePath: "images/pic_tigo.png",
+                                            ontab: () {
+                                              method.launchURL(
+                                                  "https://play.google.com/store/apps/details?id=com.millicom.tigo");
+                                            },
+                                            projectTitle: "Campeones Tigo",
+                                            projectDesc:
+                                                "TIGO is a Colombian telecommunications company. It has as majority"
+                                                "shareholder Millicom International Cellular. This application monitors your performance"
+                                                "indicators throughout the month and keep visibility of your results and historical trends",
+                                            tech2: "React Native (Javascript)",
+                                          ),
+                                          FeatureProject(
+                                            imagePath: "images/pic_pitz.png",
+                                            ontab: () {
+                                              method.launchURL(
+                                                  "https://play.google.com/store/search?q=pitz&c=apps");
+                                            },
+                                            projectTitle: "Pitz",
+                                            projectDesc:
+                                                "is a focused mobile app for amateur soccer players, they can schedule matches,"
+                                                "watch the player of the match, statistics and all in real time powered by Firebase",
+                                            tech2: "Android (Kotlin)",
+                                          ),
+                                        ],
+                                      )),
+
                                   const SizedBox(
                                     height: 6.0,
                                   ),
-                                  const CustomText(
-                                    text: "Aaron Garcia.",
-                                    textsize: 68.0,
-                                    color: Color(0xffCCD6F6),
-                                    fontWeight: FontWeight.w900,
-                                  ),
-                                  const SizedBox(
-                                    height: 4.0,
-                                  ),
-                                  CustomText(
-                                    text: "I build Mobile apps.",
-                                    textsize: 45.0,
-                                    color: const Color(0xffCCD6F6)
-                                        .withOpacity(0.6),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                  SizedBox(
-                                    height: size.height * .04,
-                                  ),
-                                  Wrap(
-                                    children: const [
-                                      Text(
-                                        "I'm a freelancer based in Guadalajara, Mexico. "
-                                        "\nSpecialized in mobile app development "
-                                        "\nusing native (Swift | Kotlin) "
-                                        "\nand hybrid (flutter)",
-                                        style: TextStyle(
-                                          color: Colors.grey,
-                                          fontSize: 16.0,
-                                          letterSpacing: 2.75,
-                                          wordSpacing: 0.75,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: size.height * .12,
-                                  ),
 
-                                  //get in tuch text
-                                  InkWell(
-                                    onTap: () {
-                                      method.launchEmail();
-                                    },
-                                    hoverColor: const Color(0xff64FFDA)
-                                        .withOpacity(0.2),
-                                    borderRadius: BorderRadius.circular(4.0),
-                                    child: Container(
-                                      alignment: Alignment.center,
-                                      height: size.height * 0.09,
-                                      width: size.width * 0.14,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: const Color(0xff64FFDA),
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(4.0),
-                                      ),
-                                      child: const Text(
-                                        "Get In Touch",
-                                        style: TextStyle(
-                                          color: Color(0xff64FFDA),
-                                          letterSpacing: 2.75,
-                                          wordSpacing: 1.0,
-                                          fontSize: 15.0,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: size.height * 0.20,
-                                  ),
-                                ],
-                              ),
-
-                              //About Me
-                              _wrapScrollTag(
-                                index: 0,
-                                child: About(),
-                              ),
-                              SizedBox(
-                                height: size.height * 0.02,
-                              ),
-
-                              //Where I've Worked
-                              _wrapScrollTag(
-                                index: 1,
-                                child: const Work(),
-                              ),
-                              SizedBox(
-                                height: size.height * 0.10,
-                              ),
-
-                              //Some Things I've Built Main Project
-                              _wrapScrollTag(
-                                  index: 2,
-                                  child: Column(
-                                    children: [
-                                      const MainTitle(
-                                        number: "0.3",
-                                        text: "Some Things I've Built",
-                                      ),
-                                      SizedBox(
-                                        height: size.height * 0.04,
-                                      ),
-                                      FeatureProject(
-                                        imagePath: "images/pic_nubank.png",
-                                        ontab: () {
-                                          method.launchURL(
-                                              "https://nu.com.mx/credito/");
-                                        },
-                                        projectTitle: "Nubank",
-                                        projectDesc:
-                                            """Nubank is a Brazilian neobank and the largest fintech bank in Latin America. Its headquarters are located in São Paulo, Brazil. The company also has engineering offices in Berlin, Germany, Buenos Aires, Argentina, and an office in Mexico City, Mexico.""",
-                                        tech1: "Flutter (Dart)",
-                                        tech2: "Android (Kotlin)",
-                                        tech3: "IOS (Swift)",
-                                      ),
-                                    ],
-                                  )),
-
-                              const SizedBox(
-                                height: 6.0,
-                              ),
-
-                              //Get In Touch
-                              _wrapScrollTag(
-                                index: 3,
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: size.height * 0.68,
-                                      width: MediaQuery.of(context).size.width -
-                                          100,
-                                      // color: Colors.orange,
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          const CustomText(
-                                            text: "What's Next?",
-                                            textsize: 16.0,
-                                            color: Color(0xff41FBDA),
-                                            letterSpacing: 3.0,
-                                          ),
-                                          const SizedBox(
-                                            height: 16.0,
-                                          ),
-                                          const CustomText(
-                                            text: "Get In Touch",
-                                            textsize: 42.0,
-                                            color: Colors.white,
-                                            letterSpacing: 3.0,
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                          const SizedBox(
-                                            height: 16.0,
-                                          ),
-                                          Wrap(
+                                  //Get In Touch
+                                  _wrapScrollTag(
+                                    index: 3,
+                                    child: Column(
+                                      children: [
+                                        SizedBox(
+                                          height: size.height * 0.68,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width -
+                                              100,
+                                          // color: Colors.orange,
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: [
-                                              Text(
-                                                "Although I'm currently looking for Freelance part-time opportunities, my inbox is \nalways open. Whether you have a question or just want to say hi, I'll try my \nbest to get back to you!",
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                  color: Colors.white
-                                                      .withOpacity(0.4),
-                                                  letterSpacing: 0.75,
-                                                  fontSize: 17.0,
-                                                ),
+                                              const CustomText(
+                                                text: "What's Next?",
+                                                textsize: 16.0,
+                                                color: Color(0xff41FBDA),
+                                                letterSpacing: 3.0,
                                               ),
-                                            ],
-                                          ),
-                                          const SizedBox(
-                                            height: 32.0,
-                                          ),
-                                          InkWell(
-                                            onTap: () {
-                                              method.launchEmail();
-                                            },
-                                            child: Card(
-                                              elevation: 4.0,
-                                              color: const Color(0xff64FFDA),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(6.0),
+                                              const SizedBox(
+                                                height: 16.0,
                                               ),
-                                              child: Container(
-                                                margin:
-                                                    const EdgeInsets.all(0.85),
-                                                height: size.height * 0.09,
-                                                width: size.width * 0.10,
-                                                alignment: Alignment.center,
-                                                decoration: BoxDecoration(
-                                                  color:
-                                                      const Color(0xff0A192F),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          6.0),
-                                                ),
-                                                child: const Padding(
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 8.0,
-                                                  ),
-                                                  child: Text(
-                                                    "Say Hello",
+                                              const CustomText(
+                                                text: "Get In Touch",
+                                                textsize: 42.0,
+                                                color: Colors.white,
+                                                letterSpacing: 3.0,
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                              const SizedBox(
+                                                height: 16.0,
+                                              ),
+                                              Wrap(
+                                                children: [
+                                                  Text(
+                                                    "Although I'm currently looking for Freelance part-time opportunities, my inbox is \nalways open. Whether you have a question or just want to say hi, I'll try my \nbest to get back to you!",
+                                                    textAlign: TextAlign.center,
                                                     style: TextStyle(
-                                                      color: Color(0xff64FFDA),
+                                                      color: Colors.white
+                                                          .withOpacity(0.4),
+                                                      letterSpacing: 0.75,
+                                                      fontSize: 17.0,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              const SizedBox(
+                                                height: 32.0,
+                                              ),
+                                              InkWell(
+                                                onTap: () {
+                                                  method.launchEmail();
+                                                },
+                                                child: Card(
+                                                  elevation: 4.0,
+                                                  color:
+                                                      const Color(0xff64FFDA),
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6.0),
+                                                  ),
+                                                  child: Container(
+                                                    margin:
+                                                        const EdgeInsets.all(
+                                                            0.85),
+                                                    height: size.height * 0.09,
+                                                    width: size.width * 0.10,
+                                                    alignment: Alignment.center,
+                                                    decoration: BoxDecoration(
+                                                      color: const Color(
+                                                          0xff0A192F),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              6.0),
+                                                    ),
+                                                    child: const Padding(
+                                                      padding:
+                                                          EdgeInsets.symmetric(
+                                                        horizontal: 8.0,
+                                                      ),
+                                                      child: Text(
+                                                        "Say Hello",
+                                                        style: TextStyle(
+                                                          color:
+                                                              Color(0xff64FFDA),
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
                                               ),
+                                            ],
+                                          ),
+                                        ),
+
+                                        //Footer
+                                        Container(
+                                          alignment: Alignment.center,
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                              6,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width -
+                                              100,
+                                          //color: Colors.white,
+                                          child: Text(
+                                            "Page Build on 💙 Flutter",
+                                            style: TextStyle(
+                                              color:
+                                                  Colors.white.withOpacity(0.4),
+                                              letterSpacing: 1.75,
+                                              fontSize: 14.0,
                                             ),
                                           ),
-                                        ],
-                                      ),
-                                    ),
-
-                                    //Footer
-                                    Container(
-                                      alignment: Alignment.center,
-                                      height:
-                                          MediaQuery.of(context).size.height /
-                                              6,
-                                      width: MediaQuery.of(context).size.width -
-                                          100,
-                                      //color: Colors.white,
-                                      child: Text(
-                                        "Page Build on 💙 Flutter",
-                                        style: TextStyle(
-                                          color: Colors.white.withOpacity(0.4),
-                                          letterSpacing: 1.75,
-                                          fontSize: 14.0,
                                         ),
-                                      ),
+                                      ],
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            ])),
+                            ),
                           ],
                         ),
                       ),

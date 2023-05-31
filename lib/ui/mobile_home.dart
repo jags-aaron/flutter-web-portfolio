@@ -118,11 +118,11 @@ class MobileHomeState extends State<MobileHome> {
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: Wrap(
                   children: const [
-                     Text(
-                       "I'm a freelancer based in Guadalajara, Mexico. "
-                           "\nSpecialized in mobile app development "
-                           "\nusing native (Swift | Kotlin) "
-                           "\nand hybrid (flutter)",
+                    Text(
+                      "I'm a freelancer based in Guadalajara, Mexico. "
+                      "\nSpecialized in mobile app development "
+                      "\nusing native (Swift | Kotlin) "
+                      "\nand hybrid (flutter)",
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15.0,
@@ -219,7 +219,7 @@ class MobileHomeState extends State<MobileHome> {
                         children: const [
                           CustomText(
                             text:
-                            "Hello! I'm Aaron.\n\nI'm a passionate about mobile app development by creating applications that add value to people's daily life. \n\nI like challenges and go beyond the limits to make things as good as possible. \n\nCurrently I have more experience in Android, but I'm always willing to try with other technologies like IOS, React Native, Xamarin, Flutter.",
+                                "Hello! I'm Aaron.\n\nI'm a passionate about mobile app development by creating applications that add value to people's daily life. \n\nI like challenges and go beyond the limits to make things as good as possible. \n\nCurrently I have more experience in Android, but I'm always willing to try with other technologies like IOS, React Native, Xamarin, Flutter.",
                             textsize: 16.0,
                             color: Color(0xff828DAA),
                             fontWeight: FontWeight.w500,
@@ -227,7 +227,7 @@ class MobileHomeState extends State<MobileHome> {
                           ),
                           CustomText(
                             text:
-                            "\nHere are a few technologies I've been working with recently:\n\n",
+                                "\nHere are a few technologies I've been working with recently:\n\n",
                             textsize: 16.0,
                             color: Color(0xff828DAA),
                             fontWeight: FontWeight.w500,
@@ -297,11 +297,6 @@ class MobileHomeState extends State<MobileHome> {
                           image: AssetImage("images/pic1.jpg"),
                         ),
                       ),
-                      Container(
-                        height: size.height * 0.5,
-                        width: size.width * 0.6,
-                        color: const Color(0xff61F9D5).withOpacity(0.5),
-                      ),
                     ],
                   ),
                 ),
@@ -329,44 +324,57 @@ class MobileHomeState extends State<MobileHome> {
                 ],
               ),
 
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+
               const MobileWork(),
 
               SizedBox(
-                height: size.height * 0.8,
+                height: size.height * 0.05,
               ),
 
               //Some Things I've Built title
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const CustomText(
-                    text: "03.",
-                    textsize: 20.0,
-                    color: Color(0xff61F9D5),
-                    fontWeight: FontWeight.w700,
-                  ),
-                  const SizedBox(
-                    width: 12.0,
-                  ),
-                  const CustomText(
-                    text: "Some Things I've Built",
-                    textsize: 26.0,
-                    color: Color(0xffCCD6F6),
-                    fontWeight: FontWeight.w700,
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.01,
-                  ),
-                  Container(
-                    width: size.width * 0.04,
-                    height: 1.10,
-                    color: const Color(0xff303C55),
-                  ),
-                ],
-              ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const CustomText(
+                  text: "03.",
+                  textsize: 20.0,
+                  color: Color(0xff61F9D5),
+                  fontWeight: FontWeight.w700,
+                ),
+                const SizedBox(
+                  width: 12.0,
+                ),
+                const CustomText(
+                  text: "Some Things I've Built",
+                  textsize: 26.0,
+                  color: Color(0xffCCD6F6),
+                  fontWeight: FontWeight.w700,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.01,
+                ),
+                Container(
+                  width: size.width * 0.04,
+                  height: 1.10,
+                  color: const Color(0xff303C55),
+                ),
+              ],
+            ),
 
               SizedBox(
                 height: size.height * 0.1,
+              ),
+
+              const Text(
+                'Nubank',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  color: Color(0xffCCD6F6),
+                  fontWeight: FontWeight.w700,
+                ),
               ),
 
               MobileProject(
@@ -375,7 +383,92 @@ class MobileHomeState extends State<MobileHome> {
               ),
 
               SizedBox(
-                height: size.height * 0.2,
+                height: size.height * 0.05,
+              ),
+
+              const Text(
+                'Crabi',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  color: Color(0xffCCD6F6),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              MobileProject(
+                ontab: () {},
+                image: "images/pic_crabi.png",
+              ),
+
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+
+              const Text(
+                'Secapp',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  color: Color(0xffCCD6F6),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              MobileProject(
+                ontab: () {},
+                image: "images/pic_secapp.png",
+              ),
+
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+
+              const Text(
+                'CNN Expansión',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  color: Color(0xffCCD6F6),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              MobileProject(
+                ontab: () {},
+                image: "images/pic_cnn_expansion.png",
+              ),
+
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+
+              const Text(
+                'Campeones Tigo',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  color: Color(0xffCCD6F6),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              MobileProject(
+                ontab: () {},
+                image: "images/pic_tigo.png",
+              ),
+
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+
+              const Text(
+                'Pitz',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  color: Color(0xffCCD6F6),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              MobileProject(
+                ontab: () {},
+                image: "images/pic_pitz.png",
+              ),
+
+              SizedBox(
+                height: size.height * 0.05,
               ),
 
               FittedBox(

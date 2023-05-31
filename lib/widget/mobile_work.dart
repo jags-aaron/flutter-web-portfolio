@@ -15,34 +15,20 @@ class MobileWorkState extends State<MobileWork> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    return ConstrainedBox(
-      constraints: BoxConstraints.tightFor(
-        width: size.width,
-        height: size.height * 1.7,
-      ),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(20),
-                height: size.height * 1.5,
-                child: const VerticalDivider(
-                  color: Color(0xff64FFDA),
-                  width: 10,
-                ),
-              ),
-              Expanded(
-                flex: 4,
-                child: SizedBox(
-                  height: size.height * 1.2,
-                  child: const MobileWorkBox(),
-                ),
-              )
-            ],
-          )
-        ],
-      ),
+    return Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(20),
+          height: size.height * 1.25,
+          child: const VerticalDivider(
+            color: Color(0xff64FFDA),
+            width: 10,
+          ),
+        ),
+        const Expanded(
+          child: MobileWorkBox(),
+        )
+      ],
     );
   }
 }

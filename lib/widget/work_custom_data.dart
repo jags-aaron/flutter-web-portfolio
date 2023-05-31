@@ -4,12 +4,14 @@ class WorkCustomData extends StatelessWidget {
   final String title;
   final String subTitle;
   final String duration;
+  final bool withSpace;
 
   const WorkCustomData({
     super.key,
     required this.title,
     required this.subTitle,
     required this.duration,
+    this.withSpace = false,
   });
 
   @override
@@ -48,6 +50,10 @@ class WorkCustomData extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
+        if (withSpace)
+          const SizedBox(
+            height: 30,
+          )
       ],
     );
   }
